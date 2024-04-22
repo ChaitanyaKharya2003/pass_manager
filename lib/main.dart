@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:pass_manager/firebase_options.dart';
 import 'package:pass_manager/route.dart';
-import 'package:pass_manager/screens/bottom_nav.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -21,7 +19,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-final GoogleSignIn googleSignIn = GoogleSignIn();
 
 _initializeFirebase() async {
   await Firebase.initializeApp(

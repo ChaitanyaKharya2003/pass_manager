@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:pass_manager/main.dart';
 
 class AuthRepository {
-  Future<void> signInWithGoogle() async {
+  
+  signInWithGoogle() async {
+    final GoogleSignIn googleSignIn = GoogleSignIn();
     try {
       final GoogleSignInAccount? googleSignInAccount =
           await googleSignIn.signIn();
@@ -23,6 +24,8 @@ class AuthRepository {
     } catch (e) {
       print(e.toString());
     }
+  
   }
+  
   
 }
